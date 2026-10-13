@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tick Tock</title>
+</head>
+<body>
+        <h1>Tick Tock</h1>
+    <h4>By: Alien Antics inc.</h4>
+    <div class="clock">10:00</div>
+    <script>
+    function startclock (){
+            let timeLeft = 600;
+            const clock = document.querySelector(".clock");
+
+            function updateDisplay() {
+                const min = String(Math.floor(timeLeft / 60)).padStart(2, "0");
+                const sec = String(timeLeft % 60).padStart(2, "0");
+                clock.textContent = min + ":" + sec;
+            }
+
+            const countdown = setInterval(() => {
+                timeLeft--;
+                updateDisplay();
+
+                if (timeLeft <= 0) {
+                    clearInterval(countdown);
+                    clock.textContent = "Time's up!";
+                }
+            }, 1000);}
+    function test_str() {
+        let res;
+        let str =
+            document.getElementById("t1").value;
+        if (str.match(12345))
+            window.location.href="matchinggamepage.html"
+        else
+            alert("wrong")
+    }
+    startclock()
+    </script>
+    <p>
+        <div class="input">
+        <input type="text" placeholder="password" id="t1" />
+        </div>
+        <br />
+        <div class="submit">
+        <input type="button" value="Submit" onclick="test_str()" />
+        </div>
+    <link rel = "stylesheet" href = "style.css">
+</body>
+</html>
