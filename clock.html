@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="clockstyle.css">
+</head>
+<body>
+    <div class="clock">10:00</div>
+    <script>
+    function startclock (){
+            let timeLeft = 600;
+            const clock = document.querySelector(".clock");
+
+            function updateDisplay() {
+                const min = String(Math.floor(timeLeft / 60)).padStart(2, "0");
+                const sec = String(timeLeft % 60).padStart(2, "0");
+                clock.textContent = min + ":" + sec;
+            }
+
+            const countdown = setInterval(() => {
+                timeLeft--;
+                updateDisplay();
+
+                if (timeLeft <= 0) {
+                    clearInterval(countdown);
+                    clock.textContent = "Time's up!";
+                }
+            }, 1000);}
+    startclock()
+    </script>
+</body>
+</html>
