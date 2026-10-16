@@ -8,21 +8,38 @@
 <body>
     <script>    
     function test_str() {
-        let str1 =
-            document.getElementById("t1").value;
-        if ((str1.toLowerCase()).match("bunsen burner"))
-            let str2 = document.getElementById("t2").value;
-            if ((str2.toLowerCase()).match("flask")) || ((str2.toLowerCase).match("Erlenmeyer flask"))
-                let str3 = document.getElementById("t3").value;
-                if ((str3.toLowerCase()).match("funnel"))
-                    let str4 = document.getElementById("t4").value;
-                    if ((str4.toLowerCase()).match("wire gauze"))
-                        let str5 = document.getElementById("t5").value;
-                        if ((str5.toLowerCase()).match("test tube"))
-                            alert("Correct");
-     } else; {
-            alert("wrong");
+        let str1 = document.getElementById("t1").value.toLowerCase().trim();
+
+    if (str1 === "bunsen burner") {
+        let str2 = document.getElementById("t2").value.toLowerCase().trim();
+
+        if (str2 === "flask" || str2 === "erlenmeyer flask") {
+            let str3 = document.getElementById("t3").value.toLowerCase().trim();
+
+            if (str3 === "funnel") {
+                let str4 = document.getElementById("t4").value.toLowerCase().trim();
+
+                if (str4 === "wire gauze") {
+                    let str5 = document.getElementById("t5").value.toLowerCase().trim();
+
+                    if (str5 === "test tube") {
+                        alert("Correct!");
+                    } else {
+                        alert("Wrong!");
+                    }
+                } else {
+                    alert("Wrong!");
+                }
+            } else {
+                alert("Wrong!");
+            }
+        } else {
+            alert("Wrong!");
+        }
+    } else {
+        alert("Wrong!");
     }
+}
     </script>
     <h1>Match them to move on</h1>
     <img src="pictures/burner.png">
