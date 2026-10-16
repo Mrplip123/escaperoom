@@ -6,22 +6,38 @@
     <title>Match</title>
 </head>
 <body>
+    <script>    
+    function test_str() {
+        let str1 =
+            document.getElementById("t1").value;
+        if ((str1.toLowerCase).match("bunsen burner"))
+            let str2 = document.getElementById("t2").value;
+            if ((str2.toLowerCase).match("flask")) or ((str2.toLowerCase).match("Erlenmeyer flask"))
+                let str3 = document.getElementById("t3").value;
+                if ((str3.toLowerCase).match("funnel"))
+                    let str4 = document.getElementById("t4").value;
+                    if ((str4.toLowerCase).match("wire gauze"))
+                        let str5 = document.getElementById("t5").value;
+                        if ((str5.toLowerCase).match("test tube"))
+                            alert("Correct")
+        else
+            alert("wrong")</script>
     <h1>Match them to move on</h1>
     <img src="pictures/burner.png">
-    <input class="match" type="text" placeholder="apparatus name">
+    <input class="match" type="text" placeholder="apparatus name" id="t1">
     <br />
     <img src="pictures/flask.png">
-    <input class="match type="text placeholder="apparatus name">
+    <input class="match type="text placeholder="apparatus name" id="t2">
     <br />
     <img src="pictures/funnel.png">
-    <input class="match" type="text" placeholder="apparatus name">
-    <input class="submit" type="submit">
+    <input class="match" type="text" placeholder="apparatus name" id="t3">
+    <input class="submit" type="submit" onclick="test_str()"/>
     <br />
     <img src="pictures/gauze.png">
-    <input class="match" type="text" placeholder="apparatus name">
+    <input class="match" type="text" placeholder="apparatus name" id="t4">
     <br />
     <img src="pictures/test_tube.png">
-    <input class="match" type="text" placeholder="apparatus name">
+    <input class="match" type="text" placeholder="apparatus name"  id="t5">
     <br />
     <link rel="stylesheet" href="style.css">
 </body>
