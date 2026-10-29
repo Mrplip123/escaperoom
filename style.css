@@ -1,5 +1,5 @@
 body { background-color: rgb(51, 112, 8); background-size: cover; background-attachment: fixed; }
-h1, h4 { text-align: center; color: black; }
+h1, h4, p { text-align: center; color: black; }
 ul { display: none; }
 input { color: black; font-size: x-large; height: 50px; width: 100px;}
 .input{margin-top: 100px; margin-left: 575px;}
